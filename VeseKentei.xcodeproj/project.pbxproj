@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7FD7A8C41D1E615D00580D4C /* SEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD7A8C31D1E615D00580D4C /* SEManager.swift */; };
 		7FF34AB01D16309300575FE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF34AAF1D16309300575FE2 /* AppDelegate.swift */; };
 		7FF34AB21D16309300575FE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF34AB11D16309300575FE2 /* ViewController.swift */; };
 		7FF34AB51D16309300575FE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FF34AB31D16309300575FE2 /* Main.storyboard */; };
@@ -91,6 +92,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7FD7A8C31D1E615D00580D4C /* SEManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SEManager.swift; sourceTree = "<group>"; };
 		7FF34AAC1D16309300575FE2 /* VeseKentei.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VeseKentei.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FF34AAF1D16309300575FE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FF34AB11D16309300575FE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -159,8 +161,8 @@
 		7FF34B141D16310600575FE2 /* Icon */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Icon"; sourceTree = "<group>"; };
 		7FF34B151D16310600575FE2 /* mistake.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mistake.mp3; sourceTree = "<group>"; };
 		7FF34B161D16310600575FE2 /* right.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = right.mp3; sourceTree = "<group>"; };
-		7FF34B4E1D1631E100575FE2 /* KenteiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KenteiViewController.swift; sourceTree = "<group>"; };
-		7FF34B501D16322000575FE2 /* ScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
+		7FF34B4E1D1631E100575FE2 /* KenteiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KenteiViewController.swift; path = ../KenteiViewController.swift; sourceTree = "<group>"; };
+		7FF34B501D16322000575FE2 /* ScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScoreViewController.swift; path = ../ScoreViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,8 +197,6 @@
 				7FF34AC31D16309300575FE2 /* VeseKenteiTests */,
 				7FF34ACE1D16309400575FE2 /* VeseKenteiUITests */,
 				7FF34AAD1D16309300575FE2 /* Products */,
-				7FF34B4E1D1631E100575FE2 /* KenteiViewController.swift */,
-				7FF34B501D16322000575FE2 /* ScoreViewController.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -215,9 +215,12 @@
 			children = (
 				7FF34AAF1D16309300575FE2 /* AppDelegate.swift */,
 				7FF34AB11D16309300575FE2 /* ViewController.swift */,
+				7FF34B4E1D1631E100575FE2 /* KenteiViewController.swift */,
+				7FF34B501D16322000575FE2 /* ScoreViewController.swift */,
 				7FF34AB31D16309300575FE2 /* Main.storyboard */,
 				7FF34AB61D16309300575FE2 /* Assets.xcassets */,
 				7FF34AB81D16309300575FE2 /* LaunchScreen.storyboard */,
+				7FD7A8C31D1E615D00580D4C /* SEManager.swift */,
 				7FF34ADD1D16310600575FE2 /* csv */,
 				7FF34AE11D16310600575FE2 /* images */,
 				7FF34B131D16310600575FE2 /* se */,
@@ -507,6 +510,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FF34B4F1D1631E100575FE2 /* KenteiViewController.swift in Sources */,
+				7FD7A8C41D1E615D00580D4C /* SEManager.swift in Sources */,
 				7FF34AB21D16309300575FE2 /* ViewController.swift in Sources */,
 				7FF34AB01D16309300575FE2 /* AppDelegate.swift in Sources */,
 				7FF34B511D16322000575FE2 /* ScoreViewController.swift in Sources */,
@@ -734,6 +738,7 @@
 				7FF34AD61D16309400575FE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7FF34AD71D16309400575FE2 /* Build configuration list for PBXNativeTarget "VeseKenteiTests" */ = {
 			isa = XCConfigurationList;
@@ -742,6 +747,7 @@
 				7FF34AD91D16309400575FE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7FF34ADA1D16309400575FE2 /* Build configuration list for PBXNativeTarget "VeseKenteiUITests" */ = {
 			isa = XCConfigurationList;
@@ -750,6 +756,7 @@
 				7FF34ADC1D16309400575FE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

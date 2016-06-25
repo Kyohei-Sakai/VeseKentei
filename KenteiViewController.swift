@@ -38,7 +38,7 @@ class KenteiViewController: UIViewController {
     //バックボタン
     var backBtn = UIButton()
     //SEManagerクラスのインスタンスを作成
-    //var soundManager = SEManager()
+    var soundManager = SEManager()
     
     
     override func viewDidLoad() {
@@ -92,6 +92,8 @@ class KenteiViewController: UIViewController {
         let viewController = ViewController()
         //loadCSVメソッドを使用し、csvArrayに検定問題を格納
         csvArray = viewController.loadCSV("kentei")
+        //シャッフルメソッドを使用し、検定問題を並び替えてcsvArrayに格納
+        csvArray = mondaiShuffle()
         //csvArrayの0行目を取り出し、カンマを区切りとしてmonndaiArrayに格納
         mondaiArray = csvArray[mondaiCount].componentsSeparatedByString(",")
         //変数mondaiCountに1を足してラベルに出題数を設定
@@ -114,12 +116,16 @@ class KenteiViewController: UIViewController {
         if sender.tag == Int(mondaiArray[1]){
             //○を表示
             judgeImageView.image = UIImage(named: "maru.png")
+            //SEManagerクラスのsePlayメソッドで正解音を鳴らす
+            soundManager.sePlay("right.mp3")
             //正解のカウントを増やす
             correctCount += 1
 
         }else {
             //間違っていたら×を表示
             judgeImageView.image = UIImage(named: "batsu.png")
+            //SEManagerクラスのsePlayメソッドで不正解音を鳴らす
+            soundManager.sePlay("mistake.mp3")
         }
         
         //judgeImageViewを表示
@@ -206,7 +212,28 @@ class KenteiViewController: UIViewController {
         
     }
     
-    
+    //配列シャッフルメソッド
+    func mondaiShuffle() -> [String] {
+        var array = [String]()  //String型の配列を宣言
+        //csvArrayをNSMutableArrayに変換してsortedArrayに格納
+        let sortedArray = NSMutableArray(array: csvArray)
+        //sortedArrayの配列数を取得
+        var arrayCount = sortedArray.count
+        //while文で配列の要素数だけを繰り返し処理をする
+        while(arrayCount > 0){
+            //ランダムなインデックス番号を取得するため配列数の範囲で乱数を作る
+            let randomIndex = arc4random() % UInt32(arrayCount)
+            //sortedArrayのarrayCount番号とランダム番号を入れ替える
+            sortedArray.exchangeObjectAtIndex((arrayCount - 1), withObjectAtIndex: Int(randomIndex))
+            //arrayCountを１減らす
+            arrayCount = arrayCount - 1
+            //sortedArrayのarrayCount番号の要素をarrayに追加
+            array.append(sortedArray[arrayCount] as! String)
+            
+        }
+        
+        return array
+    }
     
     
     

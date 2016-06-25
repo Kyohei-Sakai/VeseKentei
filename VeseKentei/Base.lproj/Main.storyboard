@@ -271,6 +271,16 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33V-NS-Tzw">
+                                <rect key="frame" x="43" y="355" width="235" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="235" id="Tpg-lJ-IZw"/>
+                                    <constraint firstAttribute="height" constant="20" id="itO-1k-V1J"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdH-0p-1MO">
                                 <rect key="frame" x="88" y="435" width="145" height="30"/>
                                 <state key="normal" image="kenteiBack.png"/>
@@ -279,24 +289,60 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" id="Jdy-SM-DXo"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ql-dt-5Nh">
+                                <rect key="frame" x="42" y="385" width="235" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="4FK-fm-F1v"/>
+                                    <constraint firstAttribute="width" constant="235" id="VHz-ra-DgI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwc-iw-nFJ">
+                                <rect key="frame" x="13" y="415" width="45" height="45"/>
+                                <state key="normal" image="fbOff.png"/>
+                                <state key="highlighted" image="fbOn.png"/>
+                                <connections>
+                                    <action selector="postFacebook:" destination="z5l-lk-E7D" eventType="touchUpInside" id="YDf-iH-CUu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="COa-NB-N7D">
+                                <rect key="frame" x="263" y="415" width="45" height="45"/>
+                                <state key="normal" image="twOff.png"/>
+                                <state key="highlighted" image="twOn.png"/>
+                                <connections>
+                                    <action selector="postTwitter:" destination="z5l-lk-E7D" eventType="touchUpInside" id="WXz-NA-j93"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="NdY-JQ-4DF" firstAttribute="centerX" secondItem="Oih-y2-Du8" secondAttribute="centerX" id="0Lu-1u-5B2"/>
                             <constraint firstItem="r1Y-R1-pdr" firstAttribute="centerX" secondItem="Oih-y2-Du8" secondAttribute="centerX" id="E68-UY-CL7"/>
+                            <constraint firstItem="33V-NS-Tzw" firstAttribute="centerY" secondItem="Oih-y2-Du8" secondAttribute="centerY" constant="125" id="Evj-Sr-FEu"/>
+                            <constraint firstItem="2ql-dt-5Nh" firstAttribute="centerY" secondItem="Oih-y2-Du8" secondAttribute="centerY" constant="155" id="HRU-il-W9Z"/>
                             <constraint firstItem="A2R-KU-hg1" firstAttribute="centerX" secondItem="Oih-y2-Du8" secondAttribute="centerX" id="JfM-La-uIU"/>
                             <constraint firstItem="A2R-KU-hg1" firstAttribute="centerY" secondItem="Oih-y2-Du8" secondAttribute="centerY" constant="120" id="Kxm-AX-M86"/>
                             <constraint firstItem="NdY-JQ-4DF" firstAttribute="centerY" secondItem="Oih-y2-Du8" secondAttribute="centerY" constant="-180" id="OeC-i6-ntk"/>
+                            <constraint firstItem="OsK-6D-XJG" firstAttribute="top" secondItem="bwc-iw-nFJ" secondAttribute="bottom" constant="20" id="XqY-Hf-ORi"/>
+                            <constraint firstItem="OsK-6D-XJG" firstAttribute="top" secondItem="COa-NB-N7D" secondAttribute="bottom" constant="20" id="YDx-zF-u78"/>
                             <constraint firstItem="YlR-eF-gvp" firstAttribute="centerY" secondItem="Oih-y2-Du8" secondAttribute="centerY" constant="95" id="YNc-yM-ZKs"/>
                             <constraint firstItem="OsK-6D-XJG" firstAttribute="top" secondItem="kdH-0p-1MO" secondAttribute="bottom" constant="15" id="ZLf-Vt-v3b"/>
+                            <constraint firstItem="COa-NB-N7D" firstAttribute="leading" secondItem="kdH-0p-1MO" secondAttribute="trailing" constant="30" id="ckM-mo-tCz"/>
+                            <constraint firstItem="2ql-dt-5Nh" firstAttribute="centerX" secondItem="Oih-y2-Du8" secondAttribute="centerX" id="coX-Im-Qcg"/>
                             <constraint firstItem="YlR-eF-gvp" firstAttribute="centerX" secondItem="Oih-y2-Du8" secondAttribute="centerX" id="dVi-J3-VzG"/>
                             <constraint firstItem="kdH-0p-1MO" firstAttribute="centerX" secondItem="Oih-y2-Du8" secondAttribute="centerX" id="jUl-v9-Jhy"/>
+                            <constraint firstItem="33V-NS-Tzw" firstAttribute="centerX" secondItem="Oih-y2-Du8" secondAttribute="centerX" id="oM3-rL-o8d"/>
+                            <constraint firstItem="kdH-0p-1MO" firstAttribute="leading" secondItem="bwc-iw-nFJ" secondAttribute="trailing" constant="30" id="tMk-0t-RUv"/>
                             <constraint firstItem="r1Y-R1-pdr" firstAttribute="centerY" secondItem="Oih-y2-Du8" secondAttribute="centerY" constant="-40" id="zra-jE-LUh"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="goukakuTimesLabel" destination="33V-NS-Tzw" id="Uvn-Ef-WaH"/>
                         <outlet property="judgeImageView" destination="r1Y-R1-pdr" id="F5Z-oR-a2M"/>
+                        <outlet property="rankLabel" destination="2ql-dt-5Nh" id="Wu0-2z-l8S"/>
                         <outlet property="scoreLabel" destination="YlR-eF-gvp" id="ojS-Ld-d1f"/>
                     </connections>
                 </viewController>
@@ -309,10 +355,14 @@
         <image name="Goukaku.png" width="270" height="169"/>
         <image name="btn_off.png" width="303" height="37"/>
         <image name="btn_on.png" width="303" height="37"/>
+        <image name="fbOff.png" width="45" height="45"/>
+        <image name="fbOn.png" width="50" height="50"/>
         <image name="kenteiBack.png" width="145" height="30"/>
         <image name="kenteiBackOn.png" width="145" height="30"/>
         <image name="logo.png" width="308" height="98"/>
         <image name="mondai_back_ground.png" width="310" height="173"/>
         <image name="scoreBG.png" width="270" height="123"/>
+        <image name="twOff.png" width="45" height="45"/>
+        <image name="twOn.png" width="45" height="45"/>
     </resources>
 </document>
